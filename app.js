@@ -11,7 +11,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
     var result = new Array(2);//or var result = [];
     result[0] = a + b;
-    result[1] = 'The sum of ' + a + ' and ' + b + ' is ' + result[0] + '.';
+    result[1] = `The sum of ${a} and ${b} is ${result[0]}.`;
+    //result[1] = 'The sum of ' + a + ' and ' + b + ' is ' + result[0] + '.';
     return result;
 }
 
@@ -37,7 +38,8 @@ Test this function by hand in the console to get it working, and when you think
 function multiply(a, b) { //eslint-disable-line
     var result = [];
     result[0] = a * b;
-    result[1] = 'The product of ' + a + ' and ' + b + ' is ' + result[0] + '.';
+    result[1] = `The product of ${a} and ${b} is ${result[0]}.`;
+    //result[1] = 'The product of ' + a + ' and ' + b + ' is ' + result[0] + '.';
     return result;
 }
 
@@ -73,8 +75,10 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     var result = new Array(4);
     result[0] = sum(sum(a, b)[0], c)[0];
     result[1] = multiply(multiply(a, b)[0], c)[0];
-    result[2] = a + ' and ' + b +' and ' + c +' sum to ' + result[0] + '.';
-    result[3] = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + result[1] + '.';
+    result[2] = `${a} and ${b} and ${c} sum to ${result[0]}.`;
+    //result[2] = a + ' and ' + b +' and ' + c +' sum to ' + result[0] + '.';
+    result[3] = `The product of ${a} and ${b} and ${c} is ${result[1]}.`;
+    //result[3] = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + result[1] + '.';
     return result;
 }
 
@@ -109,7 +113,8 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
     var result = [];
     result[0] = sum(sum(sumArr[0], sumArr[1])[0],sumArr[2])[0];
-    result[1] = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + result[0] + ' is their sum.';
+    result[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${result[0]} is their sum.`;
+    //result[1] = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + result[0] + ' is their sum.';
     return result;
 }
 
@@ -142,7 +147,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) { //eslint-disable-line
     var result = [];
     result[0] = multiply(multiply(multArr[0], multArr[1])[0],multArr[2])[0];
-    result[1] = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + result[0] + '.';
+    result[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${result[0]}.`;
+    //result[1] = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + result[0] + '.';
     return result;
 }
 
@@ -184,7 +190,8 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     for(var i = 1; i < dynamicArray.length; i++){
         result[0] = multiply(result[0], dynamicArray[i])[0];
     }
-    result[1] = 'The numbers ' + dynamicArray + ' have a product of ' + result[0] + '.';
+    result[1] = `The numbers ${dynamicArray} have a product of ${result[0]}.`;
+    //result[1] = 'The numbers ' + dynamicArray + ' have a product of ' + result[0] + '.';
     return result;
 }
 
